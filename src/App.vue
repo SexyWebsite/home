@@ -1,4 +1,5 @@
 <template>
+  <div>Sexy's Home Page</div>
   <img alt="Vue logo" :src="logoImg" />
   <HelloWorld msg="Hello Vue 3 + Vite" />
 </template>
