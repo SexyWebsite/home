@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "scripts": {
     "dev": "vite",
-    "build": "vuedx-typecheck . && vite build",
+    "build": "vuedx-typecheck ./src && vite build",
     "release": "standard-version",
     "release-f": "standard-version -f",
     "release-major": "standard-version --release-as major",
