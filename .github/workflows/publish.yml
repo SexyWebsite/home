@@ -94,6 +94,6 @@ jobs:
           # 服务器ip：换成你的服务器IP
           REMOTE_HOST: ${{ secrets.SERVER_IP }}
           # 用户
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          REMOTE_USER: 'root'
           # 目标地址
-          TARGET: ${{ secrets.REMOTE_TARGET }}
+          TARGET: '/root/www'
