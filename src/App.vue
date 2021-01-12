@@ -6,8 +6,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue';
-import logoImg from '@/assets/logo.png';
+import HelloWorld from './components/HelloWorld.vue';
+import logoImg from './assets/logo.png';
 
 export default defineComponent({
   name: 'App',
@@ -30,5 +30,8 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+body {
+  margin: 0;
 }
 </style>

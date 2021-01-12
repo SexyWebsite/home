@@ -12,11 +12,11 @@ if (!name) throw Error('package.json中name属性不能为空！');
 const cdnBaseUrl = `${cdnHost}/${name}/`;
 export default defineConfig({
   plugins: [vue()],
-  alias: {
+  /*   alias: {
     '@': path.resolve(__dirname, 'src')
-  },
+  }, */
   build: {
-    base: cdnBaseUrl,
+    base: './', // cdnBaseUrl,
     outDir: name
   }
 });
