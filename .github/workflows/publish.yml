@@ -83,17 +83,26 @@ jobs:
 
       # 上传到服务器
       - name: 发布
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: AEnterprise/rsync-deploy@v1.0
         env:
-          # 私钥
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          # scp参数
-          ARGS: '-avzr --delete'
-          # 源目录
-          SOURCE: ${{ steps.package.outputs.name }}
-          # 服务器ip：换成你的服务器IP
-          REMOTE_HOST: ${{ secrets.SERVER_IP }}
-          # 用户
-          REMOTE_USER: 'root'
-          # 目标地址
-          TARGET: '/root/www'
+          DEPLOY_KEY: ${{ secrets.PRIVATE_KEY }}
+          ARGS: '-e -c -r --delete'
+          SERVER_PORT: '22'
+          FOLDER: ${{ steps.package.outputs.name }}
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          USERNAME: 'root'
+          SERVER_DESTINATION: '/root/www'
+        # uses: easingthemes/ssh-deploy@v2.1.5
+        # env:
+        #   # 私钥
+        #   SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+        #   # scp参数
+        #   ARGS: '-avzr --delete'
+        #   # 源目录
+        #   SOURCE: ${{ steps.package.outputs.name }}
+        #   # 服务器ip：换成你的服务器IP
+        #   REMOTE_HOST: ${{ secrets.SERVER_IP }}
+        #   # 用户
+        #   REMOTE_USER: 'root'
+        #   # 目标地址
+        #   TARGET: '/root/www'
