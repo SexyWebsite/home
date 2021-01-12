@@ -16,7 +16,7 @@ export default defineConfig({
     '@': path.resolve(__dirname, 'src')
   }, */
   build: {
-    base: './', // cdnBaseUrl,
+    base: cdnBaseUrl,
     outDir: name
   }
 });
